@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Calendar</title>
+  <meta name="author" content="Tirumal Panganamala">
+
+  <!-- JavaScript --> 
+  <script type="text/javascript" src="js/courseCal.js"></script>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/courseCal.css">
+  <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
+
+</head>
+<body onload="APP.init()">
+
+  <header class="banner">
+      <div class="logo"><span id="logoLabel">Course Planner</div>
+  </header>
+
+  <main>
+
+      <nav class="tabLinks" id="tabLinks">
+          <div class="tab active-tab" data-tab="courseView">Course Catalog</div>
+          <div class="tab" data-tab="calendarView">My Calendar</div>
+      </nav>
+
+      <aside class="courseSummary">
+          <header class="title">My Course Summary</header>
+          <section id="courseList">
+              <div id="defaultMessage">No Enrolled Courses</div>
+              <template id="courseCardLiteTemplate">
+                  <div class="courseCardLite">
+                      <div class="courseNameLite"></div>
+                      <div class="profNameLite"></div>
+                      <div class="courseDaysLite"></div>
+                      <div class="courseTimesLite"></div>
+                      <div class="removeIconLite" title="Remove Course">
+                          <i class="fa fa-times-circle fa-1x remove" aria-hidden="true"></i>
+                      </div>
+                  </div>
+              </template>
+          </section>
+      </aside>
+
+      <section class="view active-view" id="courseView">
+          <template id="courseCardTemplate">
+              <div class="courseCard">
+                  <div class="courseName" id="courseName"></div>
+                  <hr />
+                  <div class="profName" id="profName"></div>
+                  <div class="courseDays" id="courseDays"></div>
+                  <div class="courseTimes" id="courseTimes"></div>
+                  <div class="addIcon" title="Add Course">
+                      <i class="fa fa-plus-circle fa-2x add" aria-hidden="true"></i>
+                  </div>
+                  <div class="removeIcon" title="Remove Course">
+                      <i class="fa fa-times-circle fa-2x remove" aria-hidden="true"></i>
+                  </div>
+              </div>
+          </template>
+      </section>
+
+      <section class="view" id="calendarView">
+          <section class="calName">
+              <input type="text" id="calName" maxlength="19" placeholder="Untitled Calendar..."/>
+          </section>
+          <section class="calendar">
+              <div class="col" id="timeSlots">
+              </div>
+              <div class="col" id="MondayCol">
+              </div>
+              <div class="col" id="TuesdayCol">
+              </div>
+              <div class="col" id="WednesdayCol">
+              </div>
+              <div class="col" id="ThursdayCol">
+              </div>
+              <div class="col" id="FridayCol">
+              </div>
+          </section>
+      </section>
+  </main>
+
+</body>
+
+    <!-- Load either/or - BUT NOT BOTH AT THE SAME TIME BECAUSE THEY HAVE CONFLICTING IDs -->
+    <script defer type="text/javascript" language="javascript" src="json/bigCatalog.json"></script>
+    <!-- <script defer type="text/javascript" language="javascript" src="json/catalog.json"></script> -->
+
+</html>

@@ -1,0 +1,319 @@
+*
+{ 
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	color: #111; 
+	font-family: 'Open Sans Condensed', sans-serif; 
+}
+
+input:focus{
+	outline: none;
+}
+
+html,body{
+    height: 100%;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+header.banner{
+	background: url("../images/banner.png") no-repeat;
+	width: 100%;
+	height: 125px;
+	background-size: cover;
+	position: relative;
+    margin-bottom: 30px;
+}
+
+header.banner > div.logo{
+	position: absolute;
+	left: 3%;
+	bottom: -10%;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 4px 10px -2px #111;
+	background-color: #208cef;
+}
+
+header.banner > div.logo > span{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+
+main{
+    position: relative;
+	width: 850px;
+	margin: auto;
+	border-radius: 5px;
+	border: 2px solid #208cef;
+	left: 120px;
+}
+
+/* COURSE SUMMARY CARD */
+
+aside.courseSummary{
+	position:fixed;
+	width: 265px;
+	height: 522px;
+	overflow-y: auto;
+	border: 2px solid #208cef;
+	border-right: none;
+	left: 50%;
+	top: 187px;
+	margin-left: -569px;
+	box-shadow: 0px 10px 20px -12px #111;
+	border-radius: 5px 0px 5px 5px;
+}
+
+header.title{
+	font-size: 14px;
+	text-align: center;
+	background-color: #208cef;
+	color: white;
+	padding: 4px;
+}
+
+section#courseList{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div#defaultMessage{
+	font-style: italic;
+	position: absolute;
+	top: 50%;
+}
+
+div.courseCardLite{
+	border-bottom: 1px solid #208cef;
+	width: 100%;
+	padding: 5px 5px 5px 25px;
+	position: relative;
+}
+
+div.courseCardLite > div.courseNameLite{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+div.courseCardLite > div.profNameLite{
+	font-size: 13px;
+	color: #5b5b5b;
+	margin-top: 3px;
+}
+
+div.courseCardLite > div.courseDaysLite,
+div.courseCardLite > div.courseTimesLite{
+	display: inline;
+	font-size: 11px;
+	color: #5b5b5b;
+}
+
+div.courseCardLite > div.removeIconLite{
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	margin-top: -8px;
+	display: none;
+}
+
+/* TAB LINKS */
+
+nav.tabLinks{
+    display: flex;
+    justify-content: center;
+    width: 260px;
+	left: 50%;
+	margin-left: -130px;
+    position: absolute;
+    top: -17px;
+}
+
+nav.tabLinks > div.tab{
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid #208cef;
+    width: 130px;
+    text-align: center;
+    display: inline-block;
+    z-index: 10;
+    background-color: white;
+    cursor: pointer;
+}
+
+nav.tabLinks > div.active-tab{
+    background-color: #208cef;
+    color: white;
+}
+
+/* VIEW STYLING */
+
+main > section.view{
+    display: none;
+}
+
+main > section.active-view{
+    display: block;
+}
+
+/* COURSE CARD */
+
+div.courseCard{
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #8F8F8F;
+	border-radius: 5px;
+	width: 350px;
+	text-align: center;
+	box-shadow: 0px 9px 20px -12px #111;
+	position: relative;
+}
+
+div.courseCard > div.courseName{
+	font-weight: bold;
+	font-size: 16px;
+	margin: 5px 0px;
+}
+
+div.courseCard > div.profName{
+	margin: 5px 0px;
+	font-size: 14px;
+}
+
+div.courseCard > div.courseDays,
+div.courseCard > div.courseTimes{
+	font-size: 12px;
+	font-weight: bold;
+	color: #5b5b5b;
+}
+
+div.courseCard > div.addIcon{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+div.courseCard > div.removeIcon{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	display: none;
+}
+
+i.add{
+	color: #1b926c;
+	cursor: pointer;
+}
+
+i.remove{
+	color: firebrick;
+	cursor: pointer;
+}
+
+section#courseView{
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-shadow: 0px 10px 20px -12px #111;
+}
+
+section#calendarView{
+	margin-top: 30px;
+	box-shadow: 0px 10px 20px -12px #111;
+	position: relative;
+}
+
+section.calName{
+	position: absolute;
+	right: 12px;
+	top: -47px;
+	padding: 5px;
+	border-radius: 5px;
+	width: 180px;
+	border: 2px solid #208cef;
+	background-color: white;
+}
+
+section.calName > input#calName{
+	width: 100%;
+	height: inherit;
+	border: none;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* CALENDAR STYLING */
+
+section.calendar{
+	display: flex;
+	height: 520px;
+}
+
+section.calendar > div.col:first-child{
+	background-color: #EAEAEA;
+}
+
+section.calendar > div.col:first-child > div{
+	border-bottom: 1px solid #9A9A9A;
+	font-weight: bold;
+}
+
+section.calendar > div.col:first-child > div:first-child{
+	background-color: white;
+}
+
+section.calendar > div.col:not(:first-child) > div:not(:first-child){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 12px;
+}
+
+div.col{
+	display: flex;
+	width: 141px;
+	flex-direction: column;
+	border-right: 1px solid #EAEAEA;
+}
+
+div.col > div {
+	height: 40px;
+	/*border: 1px solid #EAEAEA;*/
+	text-align: center;
+	padding-top: 2px;
+	font-size: 13px;
+}
+
+div.col > div:first-child{
+	border: none;
+	flex-shrink: 6;
+	line-height: 25px;
+	color: white;
+	background-color: #208cef;
+	font-size: 14px;
+}
+
+/* BLOCK-UI overrides */
+.blockMsg, blockElement {
+	display: none !important;
+}
+
+.blockUI, .blockOverlay{
+	cursor: default !important;
+	opacity: 0.4 !important;
+}
