@@ -1,10 +1,10 @@
 *
-{ 
+{
 	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
-	color: #111; 
-	font-family: 'Open Sans Condensed', sans-serif; 
+	color: #111;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 input:focus{
@@ -94,6 +94,8 @@ div#defaultMessage{
 	font-style: italic;
 	position: absolute;
 	top: 50%;
+	left: 50%;
+	margin-left: -73px;
 }
 
 div.courseCardLite{
@@ -287,6 +289,7 @@ section.calendar > div.col:not(:first-child) > div:not(:first-child){
 div.col{
 	display: flex;
 	width: 141px;
+	height: 520px;
 	flex-direction: column;
 	border-right: 1px solid #EAEAEA;
 }
